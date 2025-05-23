@@ -38,6 +38,7 @@
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new шаблон_приложения.DataSet1();
             this.usersTableAdapter = new шаблон_приложения.DataSet1TableAdapters.usersTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -104,11 +105,21 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(347, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Добро пожаловать!";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
@@ -133,5 +144,6 @@
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private DataSet1TableAdapters.usersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.Label label1;
     }
 }

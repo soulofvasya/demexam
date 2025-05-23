@@ -29,23 +29,23 @@ namespace шаблон_приложения
 
         private void таблица1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Очистка
+            // Очистка рабочей области
             foreach (Control c in Controls)
             {
                 if (c != menuStrip1) Controls.Remove(c);
             }
-
-            // Создание таблицы
+            // заголовок
+            Label label1 = new Label();
+            label1.Text = "Таблица роли";
+            label1.Location = new Point(150, 100);
+            // таблица
             DataGridView dgv = new DataGridView();
             dgv.DataSource = usersTableAdapter.GetData();
-
-            // Центрирование
-            dgv.Location = new Point(
-                (Width - dgv.Width) / 2,
-                menuStrip1.Height + (Height - menuStrip1.Height - dgv.Height) / 2
-            );
-
+            dgv.Size = new Size(450, 200);
+            dgv.Location = new Point(150, 150);
+            // добавление на форму
             Controls.Add(dgv);
+            Controls.Add(label1);
         }
     }
 }
