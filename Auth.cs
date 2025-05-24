@@ -42,8 +42,19 @@ namespace шаблон_приложения
             }
 
             // Успешная авторизация
-            new Main(user.role).Show();
+            
+            new Main(user.role_id).Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

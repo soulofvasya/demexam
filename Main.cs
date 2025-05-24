@@ -12,18 +12,26 @@ namespace шаблон_приложения
 {
     public partial class Main : Form
     {
-        private string _userRole;
-        public Main(string userRole)
+        private int _userRole;
+        public Main(int userRole)
         {
             InitializeComponent();
             _userRole = userRole;
-            if (_userRole == "1") 
+            if (_userRole == 1) //админ
             {
-                таблица1ToolStripMenuItem.Visible = true;
+                adminToolStripMenuItem.Visible = true;
+                servicesToolStripMenuItem.Visible = true;
+                bookingServicesToolStripMenuItem.Visible = true;
+                bookingsToolStripMenuItem.Visible = true;
+                guestsToolStripMenuItem.Visible = true;
+                shiftsToolStripMenuItem.Visible = true;
+                employeesToolStripMenuItem.Visible = true;
             }
-            else if (_userRole == "2")
+            else if (_userRole == 2)//менеджер
             {
-                таблица1ToolStripMenuItem.Visible = false;
+                servicesToolStripMenuItem.Visible = true;
+                employeesToolStripMenuItem.Visible = true;
+                shiftsToolStripMenuItem.Visible = true;
             }
         }
 
@@ -46,6 +54,21 @@ namespace шаблон_приложения
             // добавление на форму
             Controls.Add(dgv);
             Controls.Add(label1);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guestsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Очистка текущего содержимого панели
+            panelContent.Controls.Clear();
+            // Добавление нового UserControl
+            GuestsUserControl guestsTable = new GuestsUserControl();
+            guestsTable.Dock = DockStyle.Fill; // Занимает всю панель
+            panelContent.Controls.Add(guestsTable);
         }
     }
 }
