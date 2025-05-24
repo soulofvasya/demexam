@@ -13,12 +13,11 @@ namespace шаблон_приложения
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_auth_Click(object sender, EventArgs e)
         {
-            string login = textBox1.Text.Trim();
-            string password = textBox2.Text.Trim();
+            string login = textBox_login.Text;
+            string password = textBox_password.Text;
 
-            // Проверка на пустые поля
             if (login == "" || password == "")
             {
                 MessageBox.Show("Введите логин и пароль!");
@@ -26,24 +25,35 @@ namespace шаблон_приложения
             }
 
             // Проверка пользователя
-            var adapter = new usersTableAdapter();
-            var user = adapter.GetData().FirstOrDefault(u => u.login == login);
+            var users = new usersTableAdapter().GetData().FirstOrDefault(user => user.login == login);
 
-            if (user == null)
+            if (users == null)
             {
                 MessageBox.Show("Пользователь не найден!");
                 return;
             }
 
-            if (user.password != password)
+            if (users.password != password)
             {
                 MessageBox.Show("Неверный пароль!");
                 return;
             }
 
-            // Успешная авторизация
-            new Main(user.role).Show();
-            this.Hide();
+            if (users.role == 1)
+            {
+                new Admin().Show();
+                this.Hide();
+            }
+            else if (users.role == 2)
+            {
+                new Manager().Show();
+                this.Hide();
+            }
+            
+            else
+            {
+                MessageBox.Show("Ошибка входа, такой роли не существует. Обратитесь к администратору.");
+            }
         }
     }
 }
