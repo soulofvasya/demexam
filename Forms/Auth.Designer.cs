@@ -38,7 +38,7 @@
             // 
             // button_auth
             // 
-            this.button_auth.Location = new System.Drawing.Point(367, 358);
+            this.button_auth.Location = new System.Drawing.Point(381, 261);
             this.button_auth.Name = "button_auth";
             this.button_auth.Size = new System.Drawing.Size(75, 23);
             this.button_auth.TabIndex = 0;
@@ -82,9 +82,10 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.Location = new System.Drawing.Point(350, 69);
+            this.label_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label_title.Location = new System.Drawing.Point(341, 69);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(101, 13);
+            this.label_title.Size = new System.Drawing.Size(149, 20);
             this.label_title.TabIndex = 5;
             this.label_title.Text = "Окно авторизации";
             // 

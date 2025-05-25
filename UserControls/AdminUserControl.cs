@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace шаблон_приложения
 {
-    public partial class Admin : Form
+    public partial class AdminUserControl : UserControl
     {
-        public Admin()
+        public AdminUserControl()
         {
             InitializeComponent();
             this.usersTableAdapter.Fill(this.dataSet1.users);
@@ -23,8 +23,16 @@ namespace шаблон_приложения
             if (dataSet1.HasChanges())
             {
                 // Сохраняем изменения в БД
-                usersTableAdapter.Update(this.dataSet1.users);
-                MessageBox.Show("Данные успешно сохранены!");
+                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите сохранить изменения?", "Предупреждение", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    this.usersTableAdapter.Update(this.dataSet1.users);
+                    MessageBox.Show("Данные успешно сохранены.");
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    this.usersTableAdapter.Fill(this.dataSet1.users);
+                }
             }
             else if (!dataSet1.HasChanges())
             {
