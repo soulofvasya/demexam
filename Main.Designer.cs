@@ -33,13 +33,13 @@
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.table2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.servicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shiftsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new шаблон_приложения.DataSet1();
             this.usersTableAdapter = new шаблон_приложения.DataSet1TableAdapters.usersTableAdapter();
@@ -62,7 +62,7 @@
             this.employeesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,17 +89,6 @@
             this.table2ToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
             this.table2ToolStripMenuItem.Text = "таблица2";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(465, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Добро пожаловать!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // servicesToolStripMenuItem
             // 
             this.servicesToolStripMenuItem.Name = "servicesToolStripMenuItem";
@@ -113,6 +102,7 @@
             this.bookingServicesToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.bookingServicesToolStripMenuItem.Text = "Заказы";
             this.bookingServicesToolStripMenuItem.Visible = false;
+            this.bookingServicesToolStripMenuItem.Click += new System.EventHandler(this.bookingServicesToolStripMenuItem_Click);
             // 
             // bookingsToolStripMenuItem
             // 
@@ -142,6 +132,17 @@
             this.employeesToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
             this.employeesToolStripMenuItem.Text = "Сотрудники";
             this.employeesToolStripMenuItem.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(465, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Добро пожаловать!";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // usersBindingSource
             // 

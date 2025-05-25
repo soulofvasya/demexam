@@ -1,6 +1,6 @@
 ﻿namespace шаблон_приложения
 {
-    partial class GuestsUserControl
+    partial class BookingServicesUserControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -29,19 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuestsUserControl));
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewGuests = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middlenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guestsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingServicesUserControl));
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.servicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new шаблон_приложения.DataSet1();
-            this.guestsTableAdapter = new шаблон_приложения.DataSet1TableAdapters.guestsTableAdapter();
+            this.bookingservicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.booking_servicesTableAdapter = new шаблон_приложения.DataSet1TableAdapters.booking_servicesTableAdapter();
+            this.servicesTableAdapter = new шаблон_приложения.DataSet1TableAdapters.servicesTableAdapter();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -55,121 +49,68 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.updateToolStripButton = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGuests)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guestsBindingSource)).BeginInit();
+            this.refreshToolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.bookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookingsTableAdapter = new шаблон_приложения.DataSet1TableAdapters.bookingsTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countservicesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.serviceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingservicesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dataGridView1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(51, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Гости";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridViewGuests
-            // 
-            this.dataGridViewGuests.AutoGenerateColumns = false;
-            this.dataGridViewGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGuests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.surnameDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.middlenameDataGridViewTextBoxColumn,
-            this.phoneDataGridViewTextBoxColumn,
-            this.passportDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn});
-            this.dataGridViewGuests.DataSource = this.guestsBindingSource;
-            this.dataGridViewGuests.Location = new System.Drawing.Point(58, 88);
-            this.dataGridViewGuests.Name = "dataGridViewGuests";
-            this.dataGridViewGuests.RowHeadersWidth = 51;
-            this.dataGridViewGuests.RowTemplate.Height = 24;
-            this.dataGridViewGuests.Size = new System.Drawing.Size(928, 346);
-            this.dataGridViewGuests.TabIndex = 1;
+            this.serviceidDataGridViewTextBoxColumn,
+            this.bookingidDataGridViewTextBoxColumn,
+            this.countservicesDataGridViewTextBoxColumn,
+            this.costDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.bookingservicesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(41, 88);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(940, 342);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // idDataGridViewTextBoxColumn
+            // servicesBindingSource
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.surnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // middlenameDataGridViewTextBoxColumn
-            // 
-            this.middlenameDataGridViewTextBoxColumn.DataPropertyName = "middle_name";
-            this.middlenameDataGridViewTextBoxColumn.HeaderText = "Отчество";
-            this.middlenameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.middlenameDataGridViewTextBoxColumn.Name = "middlenameDataGridViewTextBoxColumn";
-            this.middlenameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Номер телефона";
-            this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passportDataGridViewTextBoxColumn
-            // 
-            this.passportDataGridViewTextBoxColumn.DataPropertyName = "passport";
-            this.passportDataGridViewTextBoxColumn.HeaderText = "Паспортные данные";
-            this.passportDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passportDataGridViewTextBoxColumn.Name = "passportDataGridViewTextBoxColumn";
-            this.passportDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Гендер";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // guestsBindingSource
-            // 
-            this.guestsBindingSource.DataMember = "guests";
-            this.guestsBindingSource.DataSource = this.dataSet1;
+            this.servicesBindingSource.DataMember = "services";
+            this.servicesBindingSource.DataSource = this.dataSet1;
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // guestsTableAdapter
+            // bookingservicesBindingSource
             // 
-            this.guestsTableAdapter.ClearBeforeFill = true;
+            this.bookingservicesBindingSource.DataMember = "booking_services";
+            this.bookingservicesBindingSource.DataSource = this.dataSet1;
+            // 
+            // booking_servicesTableAdapter
+            // 
+            this.booking_servicesTableAdapter.ClearBeforeFill = true;
+            // 
+            // servicesTableAdapter
+            // 
+            this.servicesTableAdapter.ClearBeforeFill = true;
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.guestsBindingSource;
+            this.bindingNavigator1.BindingSource = this.bookingservicesBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -186,8 +127,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.saveToolStripButton,
-            this.toolStripSeparator,
-            this.updateToolStripButton});
+            this.refreshToolStripButton1});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -195,9 +135,9 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1043, 31);
-            this.bindingNavigator1.TabIndex = 2;
-            this.bindingNavigator1.Text = "guestsBindingNavigator";
+            this.bindingNavigator1.Size = new System.Drawing.Size(1043, 27);
+            this.bindingNavigator1.TabIndex = 1;
+            this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -205,7 +145,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
@@ -221,9 +161,8 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -292,41 +231,96 @@
             this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
             this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(29, 28);
+            this.saveToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.saveToolStripButton.Text = "&Сохранить";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
-            // toolStripSeparator
+            // refreshToolStripButton1
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 31);
+            this.refreshToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.refreshToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("refreshToolStripButton1.Image")));
+            this.refreshToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.refreshToolStripButton1.Name = "refreshToolStripButton1";
+            this.refreshToolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.refreshToolStripButton1.Text = "Обновить";
+            this.refreshToolStripButton1.Click += new System.EventHandler(this.refreshToolStripButton1_Click);
             // 
-            // updateToolStripButton
+            // bookingsBindingSource
             // 
-            this.updateToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.updateToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripButton.Image")));
-            this.updateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.updateToolStripButton.Name = "updateToolStripButton";
-            this.updateToolStripButton.Size = new System.Drawing.Size(29, 28);
-            this.updateToolStripButton.Text = "Обновить";
-            this.updateToolStripButton.Click += new System.EventHandler(this.updateToolStripButton_Click);
+            this.bookingsBindingSource.DataMember = "bookings";
+            this.bookingsBindingSource.DataSource = this.dataSet1;
             // 
-            // GuestsUserControl
+            // bookingsTableAdapter
+            // 
+            this.bookingsTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
+            this.costDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // countservicesDataGridViewTextBoxColumn
+            // 
+            this.countservicesDataGridViewTextBoxColumn.DataPropertyName = "count_services";
+            this.countservicesDataGridViewTextBoxColumn.HeaderText = "count_services";
+            this.countservicesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.countservicesDataGridViewTextBoxColumn.Name = "countservicesDataGridViewTextBoxColumn";
+            this.countservicesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bookingidDataGridViewTextBoxColumn
+            // 
+            this.bookingidDataGridViewTextBoxColumn.DataPropertyName = "booking_id";
+            this.bookingidDataGridViewTextBoxColumn.DataSource = this.bookingsBindingSource;
+            this.bookingidDataGridViewTextBoxColumn.DisplayMember = "id";
+            this.bookingidDataGridViewTextBoxColumn.HeaderText = "booking_id";
+            this.bookingidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bookingidDataGridViewTextBoxColumn.Name = "bookingidDataGridViewTextBoxColumn";
+            this.bookingidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.bookingidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.bookingidDataGridViewTextBoxColumn.ValueMember = "id";
+            this.bookingidDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // serviceidDataGridViewTextBoxColumn
+            // 
+            this.serviceidDataGridViewTextBoxColumn.DataPropertyName = "service_id";
+            this.serviceidDataGridViewTextBoxColumn.DataSource = this.servicesBindingSource;
+            this.serviceidDataGridViewTextBoxColumn.DisplayMember = "name";
+            this.serviceidDataGridViewTextBoxColumn.HeaderText = "service_id";
+            this.serviceidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.serviceidDataGridViewTextBoxColumn.Name = "serviceidDataGridViewTextBoxColumn";
+            this.serviceidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviceidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.serviceidDataGridViewTextBoxColumn.ValueMember = "id";
+            this.serviceidDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // BookingServicesUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.dataGridViewGuests);
-            this.Controls.Add(this.label1);
-            this.Location = new System.Drawing.Point(12, 72);
-            this.Name = "GuestsUserControl";
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "BookingServicesUserControl";
             this.Size = new System.Drawing.Size(1043, 470);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGuests)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guestsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servicesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingservicesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,18 +328,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewGuests;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn middlenameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource guestsBindingSource;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource bookingservicesBindingSource;
         private DataSet1 dataSet1;
-        private DataSet1TableAdapters.guestsTableAdapter guestsTableAdapter;
+        private DataSet1TableAdapters.booking_servicesTableAdapter booking_servicesTableAdapter;
+        private System.Windows.Forms.BindingSource servicesBindingSource;
+        private DataSet1TableAdapters.servicesTableAdapter servicesTableAdapter;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -358,8 +346,14 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
-        private System.Windows.Forms.ToolStripButton updateToolStripButton;
+        private System.Windows.Forms.ToolStripButton refreshToolStripButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bookingsBindingSource;
+        private DataSet1TableAdapters.bookingsTableAdapter bookingsTableAdapter;
+        private System.Windows.Forms.DataGridViewComboBoxColumn serviceidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn bookingidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countservicesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
     }
 }

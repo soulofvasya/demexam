@@ -70,5 +70,15 @@ namespace шаблон_приложения
             guestsTable.Dock = DockStyle.Fill; // Занимает всю панель
             panelContent.Controls.Add(guestsTable);
         }
+
+        private void bookingServicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Очистка текущего содержимого панели
+            panelContent.Controls.Clear();
+            // Добавление нового UserControl
+            BookingServicesUserControl bsTable = new BookingServicesUserControl();
+            bsTable.Dock = DockStyle.Fill; // Занимает всю панель
+            panelContent.Controls.Add(bsTable);
+        }
     }
 }

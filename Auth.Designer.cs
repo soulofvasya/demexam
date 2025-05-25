@@ -39,7 +39,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(459, 369);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 64);
             this.button1.TabIndex = 0;
@@ -71,18 +71,20 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(528, 215);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(163, 22);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "tklnk";
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(528, 264);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(163, 22);
             this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "123456";
             // 
             // label3
             // 
@@ -105,7 +107,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Auth";
             this.Text = "Авторизация";
             this.ResumeLayout(false);
