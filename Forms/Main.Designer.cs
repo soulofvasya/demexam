@@ -81,7 +81,7 @@
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
             this.usersToolStripMenuItem.Text = "таблица пользователей";
-            this.usersToolStripMenuItem.Click += new System.EventHandler(this.таблица1ToolStripMenuItem_Click);
+            
             // 
             // table2ToolStripMenuItem
             // 
@@ -142,7 +142,7 @@
             this.label1.Size = new System.Drawing.Size(133, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Добро пожаловать!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // usersBindingSource
             // 

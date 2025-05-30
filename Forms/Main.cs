@@ -35,31 +35,10 @@ namespace шаблон_приложения
             }
         }
 
-        private void таблица1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // Очистка рабочей области
-            foreach (Control c in Controls)
-            {
-                if (c != menuStrip1) Controls.Remove(c);
-            }
-            // заголовок
-            Label label1 = new Label();
-            label1.Text = "Таблица роли";
-            label1.Location = new Point(150, 100);
-            // таблица
-            DataGridView dgv = new DataGridView();
-            dgv.DataSource = usersTableAdapter.GetData();
-            dgv.Size = new Size(450, 200);
-            dgv.Location = new Point(150, 150);
-            // добавление на форму
-            Controls.Add(dgv);
-            Controls.Add(label1);
-        }
+        
+        
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void guestsToolStripMenuItem_Click(object sender, EventArgs e)
         {
