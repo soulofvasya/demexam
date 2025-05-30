@@ -56,7 +56,7 @@
             this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Логин:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // label2
             // 
@@ -82,6 +82,7 @@
             this.textBox2.Location = new System.Drawing.Point(528, 264);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(163, 22);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "123456";
@@ -94,7 +95,7 @@
             this.label3.Size = new System.Drawing.Size(300, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Введите логин и пароль для входа в систему";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+         
             // 
             // Auth
             // 
@@ -110,6 +111,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Auth";
             this.Text = "Авторизация";
+          
             this.ResumeLayout(false);
             this.PerformLayout();
 

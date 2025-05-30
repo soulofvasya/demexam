@@ -12,7 +12,7 @@ namespace шаблон_приложения
         {
             InitializeComponent();
         }
-
+        int count = 0;
         private void button1_Click(object sender, EventArgs e)
         {
             string login = textBox1.Text.Trim();
@@ -38,6 +38,14 @@ namespace шаблон_приложения
             if (user.password != password)
             {
                 MessageBox.Show("Неверный пароль!");
+                count++;
+                
+                if (count == 3)
+                {
+                    MessageBox.Show("Превышено количество попыток ввода! ББ");
+                    this.Close();
+                    return;
+                }
                 return;
             }
 
@@ -47,14 +55,6 @@ namespace шаблон_приложения
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
