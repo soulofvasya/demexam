@@ -103,6 +103,69 @@ else // Неизвестная роль
 
 ## Форма пользователя (н-р Admin)
 
+### Гайд для запоминания кода (пошагово):
+1. Структура формы:
+
+- Главный элемент: MenuStrip (меню)
+
+- Элемент меню: usersToolStripMenuItem (пункт "Пользователи")
+
+- Контейнер: panel_admin (панель для отображения содержимого)
+
+2. Обработчик клика по меню:
+
+```csharp
+private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+{
+    // 1. Очищаем панель
+    panel_admin.Controls.Clear();
+    
+    // 2. Создаем пользовательский контрол
+    AdminUserControl adminUserControl = new AdminUserControl();
+    
+    // 3. Добавляем его на панель
+    panel_admin.Controls.Add(adminUserControl);
+}
+```
+
+### Советы для запоминания:
+1. Запомните последовательность действий:
+
+- Clear() → new Контрол() → Add()
+
+2. Ключевые компоненты:
+
+- panel_admin - зона для отображения контента
+
+- AdminUserControl - ваша кастомная форма/контрол
+
+3. Важные моменты:
+
+- Всегда сначала очищайте панель (Clear())
+
+- Контрол добавляется именно в Controls панели
+
+### Быстрый чек-лист для воспроизведения:
+1. Создать форму с:
+
+- MenuStrip (меню)
+
+- Panel (панель для контента)
+
+2. Добавить в меню пункт (например, "Пользователи")
+
+3. Создать обработчик клика:
+
+```csharp
+private void НазваниеПунктаМеню_Click(object sender, EventArgs e)
+{
+    panel_main.Controls.Clear();
+    var control = new ВашКонтрол();
+    panel_main.Controls.Add(control);
+}
+```
+4. Привязать обработчик к пункту меню (через свойства в дизайнере)
+
 ## UserControl
 
 ## Руководство пользователя
