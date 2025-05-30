@@ -12,7 +12,7 @@ namespace шаблон_приложения
         {
             InitializeComponent();
         }
-
+        private static int error_counter = 0;
         private void button_auth_Click(object sender, EventArgs e)
         {
             string login = textBox_login.Text;
@@ -32,13 +32,20 @@ namespace шаблон_приложения
                 MessageBox.Show("Пользователь не найден!");
                 return;
             }
-
+            
             if (users.password != password)
             {
                 MessageBox.Show("Неверный пароль!");
+                error_counter++;
+                if (error_counter == 3)
+                {
+                    MessageBox.Show("Слишком много неудачных попыток входа. Обратитесь к администратору.");
+                    this.Hide();
+                    return;
+                }
                 return;
             }
-
+            
             if (users.role == 1)
             {
                 new Admin().Show();
