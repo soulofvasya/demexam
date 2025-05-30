@@ -191,6 +191,7 @@ public AdminUserControl()
     InitializeComponent();
     usersTableAdapter.Fill(dataSet1.users); // Загрузка данных при создании
 }
+```
 2. Логика сохранения:
 
 ```csharp
